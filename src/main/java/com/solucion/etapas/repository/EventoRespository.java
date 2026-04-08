@@ -34,6 +34,8 @@ public class EventoRespository {
         Evento existeEvento = findById(id);
         if(existeEvento != null){
             existeEvento.setTipoEvento(nuevoEvento.getTipoEvento());
+            existeEvento.setCapacidad(nuevoEvento.getCapacidad());
+            existeEvento.setNombre(nuevoEvento.getNombre());
             return existeEvento;
         }
         return null;
